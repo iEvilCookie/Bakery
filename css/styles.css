@@ -51,6 +51,8 @@ address {
 }
 
 ul {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
@@ -111,6 +113,28 @@ h6 p {
   font-weight: 600;
 }
 
+/* Header */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
 /* Hero section */
 
 .hero-section {
@@ -131,12 +155,19 @@ h6 p {
 
 /* Advantages */
 
-.advantages-list {
-  color: var(--color-primary-light);
+.advantages-section {
+  padding: 16px 0;
   background-color: var(--color-brand-light);
 }
 
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
 .advantages-item {
+  color: var(--color-primary-light);
   font-size: 20px;
   font-weight: 300;
 }
@@ -153,12 +184,26 @@ h6 p {
 
 /* Traditions section */
 
+.traditions-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.traditions-content {
+  max-width: 710px;
+}
+
 .traditions-section {
   padding-top: 96px;
 }
 
 .traditions title {
   margin-bottom: 42px;
+}
+
+.traditions-text.limited {
+  max-width: 340px;
 }
 
 .traditions-text .brand {
@@ -183,6 +228,22 @@ h6 p {
 }
 
 /* Formats section */
+
+.formats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.formats-item {
+  flex-basis: calc((100% - 40px) / 3);
+}
+
+.format-card {
+  padding: 24px;
+  border: 1px solid lightgray; /* remove */
+  border-radius: 16px;
+}
 
 .formats-title {
   margin-bottom: 80px;
