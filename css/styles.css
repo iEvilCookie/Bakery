@@ -105,11 +105,12 @@ a {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: color 0.5s;
 }
 
 .button:hover {
   color: var(--color-brand-dark);
-  background-color: transparent;
+  background-color: var(--color-primary-light);
 }
 
 /* Link */
@@ -117,6 +118,7 @@ a {
 .link {
   color: var(--color-primary-light);
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -125,6 +127,14 @@ a {
 }
 
 /* Header */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
+}
 
 .header-container {
   display: flex;
@@ -150,7 +160,13 @@ a {
 
 .hero-section {
   padding: 272px 0;
-  background-image: url(../images/hero-section-background.jpg);
+  background-image: linear-gradient(
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url(../images/hero-section-background.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -322,6 +338,11 @@ a {
   );
   border: 1px solid lightgray; /* remove */
   border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.format-card:hover {
+  transform: scale(1.05);
 }
 
 .formats-title {
@@ -357,6 +378,10 @@ a {
 .carousel-button:hover {
   background-color: var(--color-primary-dark);
   fill: var(--color-primary-light);
+}
+
+.carousel-button.next {
+  transform: rotate(180deg);
 }
 
 /* Contacts section */
@@ -467,10 +492,12 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s, visibility 0.3s;
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -480,8 +507,10 @@ a {
 
 .modal {
   position: relative;
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
 }
