@@ -534,14 +534,6 @@ a {
   position: absolute;
   top: 16px;
   left: 42px;
-  font-size: 16px;
-  line-height: 1.17;
-  color: var(--color-secondary-dark);
-  transition: transform 0.3s;
-}
-
-.form-field:focus-within .form-label {
-  transform: translate(-36px, -36px);
 }
 
 .form-input {
@@ -576,4 +568,14 @@ a {
 .form-terms-link {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
+}
+
+.form-input::placeholder {
+  color: var(--color-secondary-dark);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--color-primary-dark);
 }
