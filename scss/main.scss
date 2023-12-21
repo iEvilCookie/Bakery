@@ -11,7 +11,7 @@
 
 @import './components/links';
 
-@import './components/header';
+@import './layout/header';
 
 @import './components/hero-section';
 
@@ -27,11 +27,11 @@
 
 @import './components/contacts-section';
 
-@import './components/footer';
+@import './layout/footer';
 
 @import './components/modal-window';
 
-@import './components/form';
+@import './layout/form';
 
 .section {
     padding: 48px 0;
