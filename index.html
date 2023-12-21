@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сучасна пекарня</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -313,7 +313,7 @@
       </div>
     </footer>
 
-    <div class="backdrop">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
         <h2>Замовити дзвінок</h2>
@@ -326,6 +326,7 @@
               name="user-name"
               id="user-name"
               placeholder="Ім'я"
+              required
             />
             <label class="form-label visually-hidden" for="user-name"
               >Ім'я</label
@@ -339,6 +340,7 @@
               name="user-tel"
               id="user-tel"
               placeholder="Телефон"
+              required
             />
             <label class="form-label visually-hidden" for="user-tel"
               >Телефон</label
@@ -352,6 +354,7 @@
               name="user-email"
               id="user-email"
               placeholder="Електронна пошта"
+              required
             />
             <label class="form-label visually-hidden" for="user-email"
               >Електронна пошта</label
